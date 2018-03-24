@@ -1,0 +1,19 @@
+server:
+  port: 14111
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: service-session
+  redis:
+    host: 172.17.13.254
+    password: Bohui#123
+    port: 6379
+    database: 4
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1

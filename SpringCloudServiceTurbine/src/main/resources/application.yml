@@ -1,0 +1,16 @@
+spring:
+  application.name: service-turbine
+server:
+  port: 8790
+security:
+  basic:
+    enabled: false
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: service-ribbon,service-ribbon_2,service-feign
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
