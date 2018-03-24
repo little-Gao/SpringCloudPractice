@@ -1,0 +1,28 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8768
+spring:
+  application:
+    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/forezp/SpringcloudConfig/
+#          searchPaths: respo
+#          username:
+#          password:
+#    label: master
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/properties/
+  rabbitmq:
+    host:localhost
+    port:5672
